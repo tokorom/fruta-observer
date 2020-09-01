@@ -1,10 +1,3 @@
-# Swift AWS Lambda Package Template
+# Fruta Observer
 
-Swift Package template that uses [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime/)
-
-## Usage
-
-- Open https://github.com/tokorom/swift-aws-lambda-package-template
-- Push `Use this template`
-
-![use this template](https://raw.githubusercontent.com/tokorom/swift-aws-lambda-package-template/master/images/use_this_template.png)
+Lambda function to monitor https://developer.apple.com/documentation/app_clips/fruta_building_a_feature-rich_app_with_swiftui
