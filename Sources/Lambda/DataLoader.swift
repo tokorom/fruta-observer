@@ -9,10 +9,14 @@ import Foundation
 final class DataLoader {
   init() {}
 
-  func load(url: URL, completion: (Result<Data, Error>) -> Void) {
-    let data: Data
-
-    data = Data()
-    completion(.success(data))
+  func load(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
+    let task = URLSession.shared.dataTask(with: url) { data, _, error in
+      if let error = error {
+        completion(.failure(error))
+        return
+      }
+      completion(.success(data ?? Data()))
+    }
+    task.resume()
   }
 }
